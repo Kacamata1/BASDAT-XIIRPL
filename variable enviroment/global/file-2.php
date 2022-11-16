@@ -1,5 +1,7 @@
 <?php
 
+
+//Syarat Untuk Menghubungkan Require atau Include
 echo "file-02.php <br>";
 echo "Nama: {$nama} <br><br>";
 
@@ -7,3 +9,4 @@ echo "Nama: {$nama} <br><br>";
 // yang dideklarasikan di file yang lain
 
 $nama .= ' bin Zakariyya';
+?>

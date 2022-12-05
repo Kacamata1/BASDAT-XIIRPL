@@ -18,7 +18,6 @@ function validasi(array $listinput){
 
         // Menggunakan foreach untuk memanggil semua fungsi yang bernama 'lolos'
         foreach($listrules as $rules){
-            echo "->rules<strong>{$input}</strong>:";
             $namaFungsi = 'lolos'.ucfirst($rules);
             // validasi sesuai input formnye
             $lolos = $namaFungsi($request[$input]);

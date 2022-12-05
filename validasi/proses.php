@@ -9,7 +9,7 @@ $rules = [
     'email' => ['required','email'],
     'username' => ['required','username'],
     'usia' => ['required','numeric']
-];
+];  
 
 $errors = validasi($rules);
 
@@ -17,10 +17,10 @@ $errors = validasi($rules);
 // print_r($errors);
 // echo "</pre>";
 
-//Di sini kita bisa melakukan proses yang harus dilakukan 
-// jika tidak terjadi erorr validasi apapun
+// Disini kita bisa melakukan proses yang harus dilakukan
+// jika tidak terjadi error validasi apapun
 
-if (count($erorrs) > 0) {
+if (count($errors) > 0){
     $time = $_REQUEST;
     $queryString = http_build_query([
         'errors' => $errors,
@@ -30,4 +30,5 @@ if (count($erorrs) > 0) {
     header("location: form.php?{$queryString}");
     die();
 }
+
 ?>
